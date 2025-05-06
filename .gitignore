@@ -1,0 +1,71 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Log files
+*.log
+*.out
+*.err
+celery_tasks.log
+*.json
+/tmp/*.log
+
+# Environment variable files
+.env
+.env.*
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pyenv
+.python-version
+
+# datadog agent config/logs (if mounted locally)
+conf.d/
+run/
+*.pid
+*.sock
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pytest
+.cache/
+*.cover
+coverage.xml
+*.coveragerc
+htmlcov/
+
+# pyright / pyre / pytype
+.pyre/
+.pytype/
+.pyright/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Editor swap/backup
+*~
+*.swp
+*.swo

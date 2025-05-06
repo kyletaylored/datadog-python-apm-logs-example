@@ -1,0 +1,7 @@
+# python.d/conf.yaml
+logs:
+  - type: file
+    path: "/tmp/celery_tasks.log"
+    service: celery-app
+    source: python
+    sourcecategory: sourcecode
