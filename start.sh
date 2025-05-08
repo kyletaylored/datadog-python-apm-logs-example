@@ -36,9 +36,8 @@ echo "-----------------------------"
 # -----------------------
 # START CELERY WORKER
 # -----------------------
-export DD_SERVICE=celery-worker
-echo "Starting Celery Worker as service: $DD_SERVICE"
-ddtrace-run celery -A tasks worker --loglevel=info &
+echo "Starting Celery Worker as service: celery-worker"
+DD_SERVICE=celery-worker ddtrace-run celery -A tasks worker --loglevel=info &
 
 WORKER_PID=$!
 sleep 2
@@ -46,9 +45,8 @@ sleep 2
 # -----------------------
 # START RUNNER
 # -----------------------
-export DD_SERVICE=celery-runner
-echo "Starting Task Runner as service: $DD_SERVICE"
-ddtrace-run python runner.py
+echo "Starting Task Runner as service: celery-runner"
+DD_SERVICE=celery-runner ddtrace-run python runner.py
 
 # -----------------------
 # CLEANUP
